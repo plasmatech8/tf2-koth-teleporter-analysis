@@ -7,7 +7,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_OVERRIDE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else None
-EXPECTED_VERSION = "1.5.15"
+EXPECTED_VERSION = "1.5.16"
 texts = []
 targets = (
     ("light", "TF2_KOTH_Teleporter_Report_Light.pdf", "17678f", "ffffff"),

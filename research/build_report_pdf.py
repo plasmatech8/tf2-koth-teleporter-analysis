@@ -35,7 +35,7 @@ from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "TF2_KOTH_Teleporter_Report.md"
-REPORT_VERSION = "1.5.15"
+REPORT_VERSION = "1.5.16"
 REPORT_DATE = "12 September 2026"
 REPORT_TITLE = "Teleporter reinforcement value in Highlander KOTH"
 DARK_MODE = "--dark" in sys.argv

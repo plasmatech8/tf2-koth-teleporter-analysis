@@ -134,7 +134,9 @@ Nominal recharge is 10, 5 and 3 seconds at L1, L2 and L3. Including the transfer
 
 Observed replacement exits took about **16.8-21.1 seconds on Product** and **19.4-21.1 seconds on Ashville**, depending on assistance. About 21.1 seconds is the useful unassisted estimate after placement. The total outage can be longer because the Engineer must reach the placement location, may have other duties, may die, or may destroy and rebuild again.
 
-For an unassisted L1 to be ready when the fastest attacking return reaches the entrance, the first relevant death must occur no sooner than about **8.7 seconds after placement** (`21.1 - 10.4 - 2.0`). Using the mean attacking death-to-spawn time gives a threshold of about **6.7 seconds** (`21.1 - 12.4 - 2.0`). In practical terms, the team normally needs roughly **7-9 seconds of staging or survival after placement** before a rebuilt L1 is ready when that player reaches the entrance.
+For an unassisted L1 to be ready when the fastest attacking return reaches the entrance, the first relevant death must occur no sooner than about **8.7 seconds after placement** (`21.1 - 10.4 - 2.0`). Using the mean attacking death-to-spawn time gives a threshold of about **6.7 seconds** (`21.1 - 12.4 - 2.0`).
+
+> **The 7-9 second staging rule.** After an unassisted replacement exit is placed, the team generally needs roughly **7-9 seconds of staging or survival before the next relevant death** for the rebuilt L1 to be ready when that player reaches the entrance. If someone dies sooner, keeping L3 is more likely to help that first returner.
 
 <pagebreak>
 
