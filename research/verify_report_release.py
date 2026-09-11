@@ -6,17 +6,19 @@ import pdfplumber
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
-DARK_OVERRIDE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else None
+OUTPUT_OVERRIDE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else None
 EXPECTED_VERSION = "1.5.15"
 texts = []
 targets = (
     ("light", "TF2_KOTH_Teleporter_Report_Light.pdf", "17678f", "ffffff"),
     ("dark", "TF2_KOTH_Teleporter_Report_Soft_Dark.pdf", "78b1cc", "ded9cf"),
-) if DARK_OVERRIDE is None else (
-    ("dark", DARK_OVERRIDE.name, "78b1cc", "ded9cf"),
+) if OUTPUT_OVERRIDE is None else (
+    (("light", OUTPUT_OVERRIDE.name, "17678f", "ffffff")
+     if "Light" in OUTPUT_OVERRIDE.name
+     else ("dark", OUTPUT_OVERRIDE.name, "78b1cc", "ded9cf")),
 )
 for theme, filename, blue, header in targets:
-    path = DARK_OVERRIDE if theme == "dark" and DARK_OVERRIDE else ROOT / "output/pdf" / filename
+    path = OUTPUT_OVERRIDE if OUTPUT_OVERRIDE else ROOT / "output/pdf" / filename
     reader = PdfReader(path)
     pages = [p.extract_text() or "" for p in reader.pages]
     text = "\n".join(pages)

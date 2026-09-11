@@ -2,7 +2,7 @@
 
 This repository contains plasmatech8's report on the reinforcement value of keeping or destroying an Engineer's teleporter exit during competitive Team Fortress 2 King of the Hill resets.
 
-- [Read the current PDF](output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.5.15.pdf)
+- Read the current PDF: [dark theme](output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.5.15.pdf) or [light theme](output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.5.15.pdf)
 - [Read the Markdown source](TF2_KOTH_Teleporter_Report.md)
 - [See the data and privacy notes](docs/DATA.md)
 
