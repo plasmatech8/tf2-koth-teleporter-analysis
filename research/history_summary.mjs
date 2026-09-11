@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const dir='research/history';
+const audits=fs.readdirSync(dir).filter(x=>x.endsWith('.audit.json')).map(x=>JSON.parse(fs.readFileSync(dir+'/'+x))).filter(x=>!x.error&&x.rounds.length>0).sort((a,b)=>a.id-b.id);
+const phase=id=>id<1494495?'before':id===1494495?'transition':'after';
+const clock=t=>`${Math.floor(t/60)}:${(t%60).toFixed(2).padStart(5,'0')}`;
+const uses=audits.flatMap(a=>a.teleports.map(t=>({...t,phase:phase(a.id),date:a.date,map:a.map,clock:clock(t.time),seconds_since_low:Math.max(0,t.seconds_since_low??0)})));
+const csv=(file,rows)=>{if(!rows.length)return;const keys=Object.keys(rows[0]);fs.writeFileSync(file,[keys.join(','),...rows.map(r=>keys.map(k=>JSON.stringify(r[k]??'')).join(','))].join('\n'));};
+const compact=uses.map(({players,exit_position,near_names,...t})=>({...t,near_names:near_names.join('; ')}));
+csv(dir+'/tele_uses.csv',compact);csv(dir+'/candidates.csv',compact.filter(t=>t.broad_candidate));
+const stats={};for(const p of ['before','transition','after']){const a=audits.filter(a=>phase(a.id)===p),u=uses.filter(t=>t.phase===p); stats[p]={demos:a.length,rounds:a.reduce((s,a)=>s+a.rounds.length,0),active_minutes:+(a.reduce((s,a)=>s+a.active_seconds,0)/60).toFixed(1),tele_uses:u.length,nonspy_uses:u.filter(t=>t.class!=='spy').length,wipe_screens:a.reduce((s,a)=>s+a.wipes.length,0),strict:u.filter(t=>t.strict_candidate).length,strict_with_active_medic_signal:u.filter(t=>t.strict_candidate&&t.active_medic_signal).length,strict_death5:u.filter(t=>t.strict_candidate&&t.death_s!==null&&t.death_s<=5).length,strict_death10:u.filter(t=>t.strict_candidate&&t.death_s!==null&&t.death_s<=10).length,broad:u.filter(t=>t.broad_candidate).length,broad_death5:u.filter(t=>t.broad_candidate&&t.death_s!==null&&t.death_s<=5).length,all_death5:u.filter(t=>t.class!=='spy'&&t.death_s!==null&&t.death_s<=5).length,manual_exits:a.reduce((s,a)=>s+a.detonations.filter(d=>d.entrance===false).length,0)};}
+fs.writeFileSync(dir+'/summary.json',JSON.stringify({stats,coverage:audits.map(a=>({id:a.id,date:a.date,map:a.map,phase:phase(a.id),uses:a.teleports.length})),strict:compact.filter(t=>t.strict_candidate),rapid:compact.filter(t=>t.class!=='spy'&&t.death_s!==null&&t.death_s<=5)},null,2));
+console.log(JSON.stringify(stats,null,2));console.log('STRICT');for(const t of compact.filter(t=>t.strict_candidate))console.log(t.id,t.clock,t.name,t.class,'dead',t.death_s,'damage',t.damage_10s,'near',t.near_spawn_other,'deadPeers',t.dead_other);

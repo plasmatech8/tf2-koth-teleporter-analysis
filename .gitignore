@@ -1,0 +1,63 @@
+# Private source material and temporary work
+/archive/
+/provided_demos/
+/tmp/
+
+# Generated review packages and superseded reports
+/output/archive/
+/output/TF2_Teleporter_Demo_Review/
+/output/pdf/*
+!/output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.5.15.pdf
+
+# Research is private by default. The exceptions below are the reviewed,
+# publishable model, methods, figures, and analysis source.
+/research/*
+!/research/build_report_pdf.py
+!/research/demo_frontline_case.json
+!/research/demo_frontline_case.mjs
+!/research/historical_findings.md
+!/research/history_audit.mjs
+!/research/history_cost.mjs
+!/research/history_method.md
+!/research/history_summary.mjs
+!/research/history_verify.mjs
+!/research/make_main_table.mjs
+!/research/manual_demo_review_findings.md
+!/research/post_rollout_cost.json
+!/research/post_rollout_cost.mjs
+!/research/report_figures.py
+!/research/report_model.json
+!/research/report_model.mjs
+!/research/respawn_pair_audit.json
+!/research/respawn_pair_audit.mjs
+!/research/scene_probe.mjs
+!/research/validate_report.mjs
+!/research/verify_report_release.py
+!/research/report_assets/
+!/research/report_assets/*.png
+!/research/demo_extract/
+!/research/demo_extract/Cargo.toml
+!/research/demo_extract/Cargo.lock
+!/research/demo_extract/src/
+!/research/demo_extract/src/**
+
+# Raw demos, event streams, and generated audit data remain private wherever
+# they are created.
+*.dem
+*.dem.bz2
+*.jsonl
+*.audit.json
+
+# Build output, dependencies, and caches
+target/
+node_modules/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.tmp

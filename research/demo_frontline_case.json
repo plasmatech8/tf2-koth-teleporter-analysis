@@ -1,0 +1,269 @@
+{
+  "definition": "alive and at least 0.35 map-progress from own spawn; sampled about every 0.24 seconds",
+  "window": {
+    "start": 1503.42,
+    "end": 1607.58
+  },
+  "earlierArrivalWindows": [
+    {
+      "user": 7,
+      "team": 3,
+      "class": "engineer",
+      "death": 1500.5549999999998,
+      "spawn": 1514.955,
+      "next_death": 1568.2949999999998,
+      "death_after_retake": false,
+      "tele_arrival": 1520.55,
+      "walk_arrival": 1526.96,
+      "saved": 6.4,
+      "attack_saved": 6.4,
+      "start": 1520.55,
+      "end": 1526.95
+    },
+    {
+      "user": 19,
+      "team": 3,
+      "class": "heavy",
+      "death": 1554.195,
+      "spawn": 1567.02,
+      "next_death": 1728.975,
+      "death_after_retake": true,
+      "tele_arrival": 1574.14,
+      "walk_arrival": 1582.67,
+      "saved": 8.53,
+      "attack_saved": 8.53,
+      "start": 1574.14,
+      "end": 1582.67
+    },
+    {
+      "user": 10,
+      "team": 3,
+      "class": "pyro",
+      "death": 1557.6299999999999,
+      "spawn": 1571.0249999999999,
+      "next_death": 1589.5049999999999,
+      "death_after_retake": true,
+      "tele_arrival": 1576.83,
+      "walk_arrival": 1583.03,
+      "saved": 6.2,
+      "attack_saved": 6.2,
+      "start": 1576.83,
+      "end": 1583.03
+    },
+    {
+      "user": 7,
+      "team": 3,
+      "class": "engineer",
+      "death": 1568.2949999999998,
+      "spawn": 1579.0349999999999,
+      "next_death": 1615.56,
+      "death_after_retake": true,
+      "tele_arrival": 1584.63,
+      "walk_arrival": 1591.04,
+      "saved": 6.4,
+      "attack_saved": 6.4,
+      "start": 1584.63,
+      "end": 1591.0300000000002
+    },
+    {
+      "user": 17,
+      "team": 3,
+      "class": "sniper",
+      "death": 1580.46,
+      "spawn": 1591.05,
+      "next_death": 1615.77,
+      "death_after_retake": true,
+      "tele_arrival": 1596.65,
+      "walk_arrival": 1603.05,
+      "saved": 6.4,
+      "attack_saved": 6.4,
+      "start": 1596.65,
+      "end": 1603.0500000000002
+    }
+  ],
+  "durationByMargin": {
+    "actualNonSpy": {
+      "0": 14.4,
+      "1": 8.16,
+      "2": 1.68,
+      "3": 5.28,
+      "4": 2.16,
+      "5": 0.72,
+      "-6": 2.16,
+      "-5": 3.36,
+      "-4": 5.76,
+      "-3": 14.64,
+      "-2": 25.44,
+      "-1": 20.16
+    },
+    "keepNonSpy": {
+      "0": 19.68,
+      "1": 11.52,
+      "2": 3.6,
+      "3": 5.28,
+      "4": 2.16,
+      "5": 0.72,
+      "-6": 1.92,
+      "-5": 1.92,
+      "-4": 5.52,
+      "-3": 15.12,
+      "-2": 21.12,
+      "-1": 15.36
+    },
+    "actualAll": {
+      "0": 14.4,
+      "1": 8.16,
+      "2": 1.68,
+      "3": 5.28,
+      "4": 2.16,
+      "5": 0.72,
+      "-6": 2.16,
+      "-5": 3.12,
+      "-4": 6.96,
+      "-3": 15.84,
+      "-2": 22.56,
+      "-1": 20.88
+    },
+    "keepAll": {
+      "0": 20.64,
+      "1": 8.4,
+      "2": 3.6,
+      "3": 5.28,
+      "4": 2.16,
+      "5": 0.72,
+      "-6": 1.92,
+      "-5": 1.68,
+      "-4": 6.24,
+      "-3": 13.68,
+      "-2": 19.68,
+      "-1": 19.92
+    },
+    "teleCreated": {
+      "0": 78.72,
+      "1": 21.6,
+      "2": 3.6
+    }
+  },
+  "overlapSamples": [
+    {
+      "t": 1576.86,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1577.1,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1577.34,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1577.58,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1577.82,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1578.06,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1578.3,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1578.54,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1578.78,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1579.02,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1579.26,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1579.5,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1579.74,
+      "actualNonSpy": -1,
+      "keepNonSpy": 1,
+      "actualAll": -2,
+      "keepAll": 0,
+      "additions": 2
+    },
+    {
+      "t": 1579.98,
+      "actualNonSpy": -2,
+      "keepNonSpy": 0,
+      "actualAll": -3,
+      "keepAll": -1,
+      "additions": 2
+    },
+    {
+      "t": 1580.22,
+      "actualNonSpy": -2,
+      "keepNonSpy": 0,
+      "actualAll": -3,
+      "keepAll": -1,
+      "additions": 2
+    }
+  ]
+}
