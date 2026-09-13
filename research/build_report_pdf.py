@@ -35,8 +35,8 @@ from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "TF2_KOTH_Teleporter_Report.md"
-REPORT_VERSION = "1.5.16"
-REPORT_DATE = "12 September 2026"
+REPORT_VERSION = "1.5.17"
+REPORT_DATE = "13 September 2026"
 REPORT_TITLE = "Teleporter reinforcement value in Highlander KOTH"
 DARK_MODE = "--dark" in sys.argv
 output_override = next((arg.split("=", 1)[1] for arg in sys.argv[1:] if arg.startswith("--output=")), None)
@@ -546,7 +546,7 @@ def parse_markdown(text: str):
                         Spacer(1, 8 * mm),
                         Paragraph(
                             inline_markup(
-                                "**Fast reading path:** Short answer -> Applying this to the after-wipe policy -> Decision factors: what favours keeping or destroying -> Conclusion. "
+                                "**Fast reading path:** Short answer (page 3) -> 7-9 second staging rule (page 6) -> Applying this to the after-wipe policy (page 17) -> Decision factors and conclusion table (pages 22-23). "
                                 "Read the calculation and demo sections when you want to check the reasoning and evidence."
                             ),
                             quote,

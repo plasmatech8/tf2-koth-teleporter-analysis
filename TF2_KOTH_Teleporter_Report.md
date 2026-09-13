@@ -4,7 +4,7 @@
 
 How much does a teleporter change **when players return to the front**, and what does that mean for **destroying the exit after a wipe**?
 
-This report first builds the calculation for Product and Ashville attacking dry fights, then applies it to the destruction policy. It compares no usable tele, rebuilt L1, rebuilt L2 and retained L3. The main policy comparison is **keeping a charged L3 versus destroying it and entering the next fight with a ready rebuilt L1**.
+This report does two things. **First,** it models baseline teleporter reinforcement value on Product and Ashville attacking dry fights. **Second,** it applies those arrival timings to an after-wipe exit destruction policy. It compares no usable tele, rebuilt L1, rebuilt L2 and retained L3. The main policy comparison is **keeping a charged L3 versus destroying it and entering the next fight with a ready rebuilt L1**.
 
 The tele is closed during the initial after-wipe rollout. Nobody should use it until the route is safe, so keeping it provides **zero permitted benefit during that period**. The value measured here begins after ground is recovered and players need to return to the fight.
 
@@ -18,13 +18,13 @@ The tele is closed during the initial after-wipe rollout. Nobody should use it u
 
 ### What retained L3 adds over ready rebuilt L1
 
-- **A ready rebuilt L1 is just as good as L3 for the first rider.** The difference begins when additional players return before L1 has recharged. If the replacement is unfinished, even the first rider can lose time.
+- **A ready rebuilt L1 is just as good as L3 for the first rider, but it needs time to become ready.** After an unassisted exit is placed, the team generally needs about **7-9 seconds of staging or survival before the next relevant death** for the rebuilt L1 to be ready when that player reaches the entrance. Once it is ready, the difference begins when additional players return before L1 has recharged.
 - **With two returning attackers, keeping L3 gives a clear advantage over rebuilt L1.** When two attackers return on successive four-second attacking spawn waves, the second return reaches the front 5.4 seconds earlier on Product or 6.4 seconds earlier on Ashville, giving us **+1 front-line player** for that period.
 - **With three or four returners, that +1 advantage lasts longer and briefly reaches +2.** Retained L3 maintains at least +1 for 9.4 seconds on Product or 10.4 seconds on Ashville, including +2 for 1.4 or 2.4 seconds respectively. The totals are 10.8 p·s on Product and 12.8 p·s on Ashville.
 
 ### What this means for the after-wipe policy
 
-- **Destroying the exit trades immediate safety for potentially weaker reinforcement later.** The relevant comparison is the consequential mistake that destruction is likely to prevent versus the useful front-line time that retaining L3 is likely to preserve after the route becomes safe.
+- **Destroying the exit removes one immediate misuse risk but can weaken reinforcement later.** It prevents a teammate from using the retained teleporter while the exit is closed or unsafe, potentially dying and delaying the regroup. The relevant comparison is that prevented mistake versus the useful front-line time that retaining L3 is likely to preserve after the route becomes safe.
 - **The demos show evidence on both sides.** Manual review found real unsafe or premature tele uses and a probably useful missed reinforcement window after tele destruction. The current evidence does not establish that either blanket rule - always destroy or always retain - is better.
 
 ## Reading the numbers
@@ -353,6 +353,8 @@ The Ashville table uses the same layout and assumptions. Retained-L3 values matc
 ## Applying this to the after-wipe policy
 
 **Purpose:** identify when the transport value begins and how rebuilding overlaps the reset, staging and next fight.
+
+A team may adopt an after-wipe destruction policy to prevent a teammate from using the retained teleporter while its exit is closed or unsafe.
 
 **The deletion decision is made during the reset. Its cost, if any, appears in the fight that follows.** The relevant sequence is:
 
