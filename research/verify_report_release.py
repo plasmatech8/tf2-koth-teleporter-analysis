@@ -7,7 +7,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_OVERRIDE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else None
-EXPECTED_VERSION = "1.5.17"
+EXPECTED_VERSION = "1.7.0"
 texts = []
 targets = (
     ("light", "TF2_KOTH_Teleporter_Report_Light.pdf", "17678f", "ffffff"),
@@ -24,24 +24,44 @@ for theme, filename, blue, header in targets:
     text = "\n".join(pages)
     normal = re.sub(r"\s+", " ", text)
     assert f"v{EXPECTED_VERSION}" in reader.metadata.subject
-    assert reader.metadata.author == "plasmatech8"
-    assert all(f"v{EXPECTED_VERSION} | 13 September 2026" in p for p in pages)
-    assert "Author: plasmatech8" in pages[0]
+    assert reader.metadata.author == "plasmatech8 (w/ Codex)"
+    assert all(f"v{EXPECTED_VERSION} | 24 September 2026" in p for p in pages)
+    assert "Author: plasmatech8 (w/ Codex)" in pages[0]
     for required in (
-        "199 near-simultaneous opposing death pairs",
+        "209 near-simultaneous opposing death pairs",
+        "four seconds for 123 pairs",
+        "3.105 seconds apart",
+        "modelled no-tele walking arrival",
+        "a defender may walk when two defenders share one charged L3",
+        "A Level 3 teleporter has 216 health, compared with 150 at Level 1",
+        "The live game state may not fit one clean label",
         "51.94 x 1 + 5.84 x 2 = 63.62",
         "125874 / 31:28.11", "131458", "75.33-second",
         "tick 64995 / 16:14.92", "tick 65190", "tick 65337",
-        "Near-reset became a continued fight",
-        "A and B mean the two possible defender respawn-wave arrangements",
+        "No reset call was made; a near-wipe continued as a fight",
+        "A is the four-second defender gap and B is the eight-second defender gap",
         "8.7 seconds after placement", "wait no more than one second",
         "one attacker returns on each successive four-second attacking wave",
         "giving a theoretical 50% chance of +2 when two players per team trade lives",
         "With two returning attackers, keeping L3 gives a clear advantage over rebuilt L1",
         "maintains at least +1 for 9.4 seconds on Product or 10.4 seconds on Ashville",
-        "This compares our returners with theirs, not the direct L3-versus-L1 comparison below",
-        "This report does two things. First, it models baseline teleporter reinforcement value",
+        "This compares our returners with the defenders' returning cohort",
+        "This report does two things. First, it models baseline teleporter reinforcement value for attackers",
         "7-9 seconds of staging or survival before the next relevant death",
+        "The 7-9 second figure is a minimum delay, not a window",
+        "retained L3 could have brought Sniper back about 6.4 seconds earlier",
+        "In a later Product round-three grass-door contest",
+        "crossed the audit's front-line threshold sooner than the generic rollout model predicted",
+        "allow an additional return during a long fight",
+        "Teleporter transfer sequence",
+        "Appendix: expanded Product scenario timelines",
+        "Product scenario 4A - four-second defender alignment",
+        "Product scenario 4B - eight-second defender alignment",
+        "Sensitivity: attacking returns eight seconds apart",
+        "Sensitivity continued: eight-second defender alignment",
+        "L2 recharges in time to serve every rider and therefore matches L3",
+        "The no-tele case briefly falls to one fewer returning player at the front",
+        "READY -> SENDING -> RECEIVING -> RECEIVING_RELEASE -> RECHARGING -> READY",
         "Destroying the exit removes one immediate misuse risk but can weaken reinforcement later",
         "A team may adopt an after-wipe destruction policy",
         "A player dies late or respawns behind the group",

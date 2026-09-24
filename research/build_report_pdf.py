@@ -35,8 +35,8 @@ from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "TF2_KOTH_Teleporter_Report.md"
-REPORT_VERSION = "1.5.17"
-REPORT_DATE = "13 September 2026"
+REPORT_VERSION = "1.7.0"
+REPORT_DATE = "24 September 2026"
 REPORT_TITLE = "Teleporter reinforcement value in Highlander KOTH"
 DARK_MODE = "--dark" in sys.argv
 output_override = next((arg.split("=", 1)[1] for arg in sys.argv[1:] if arg.startswith("--output=")), None)
@@ -299,7 +299,7 @@ class ReportDocTemplate(BaseDocTemplate):
             topMargin=TOP,
             bottomMargin=BOTTOM,
             title=REPORT_TITLE,
-            author="plasmatech8",
+            author="plasmatech8 (w/ Codex)",
             subject=f"Report v{REPORT_VERSION} | {REPORT_DATE} | Reinforcement value and after-wipe destruction policy",
         )
         frame = Frame(LEFT, BOTTOM, CONTENT_W, PAGE_H - TOP - BOTTOM, id="body")
@@ -491,7 +491,14 @@ def parse_markdown(text: str):
                 image_reference = image_reference.replace("research/report_assets/", "research/report_assets_dark/")
             image_path = ROOT / image_reference
             img = Image(str(image_path))
-            max_image_height = 180 * mm if image_path.name == "step-5-shared-tele-timeline.png" else 154 * mm
+            full_height_timelines = {
+                "step-5-shared-tele-timeline.png",
+                "product-scenario-4a-shared-tele-with-no-tele.png",
+                "product-scenario-4b-shared-tele-with-no-tele.png",
+                "product-eight-second-return-spacing-a.png",
+                "product-eight-second-return-spacing-b.png",
+            }
+            max_image_height = 180 * mm if image_path.name in full_height_timelines else 154 * mm
             scale = min(CONTENT_W / img.imageWidth, max_image_height / img.imageHeight)
             if image_path.name == "l3-minus-l1-timeline.png":
                 scale *= 0.94
@@ -528,7 +535,7 @@ def parse_markdown(text: str):
                         Paragraph("Respawn waves, return timing, and whether to destroy the exit after a wipe", lead),
                         Spacer(1, 38 * mm),
                         Paragraph(
-                            f'Report version {REPORT_VERSION} | {REPORT_DATE}<br/>Review edition<br/><font size="7">Author: plasmatech8</font>',
+                            f'Report version {REPORT_VERSION} | {REPORT_DATE}<br/>Review edition<br/><font size="7">Author: plasmatech8 (w/ Codex)</font>',
                             caption,
                         ),
                         PageBreak(),
@@ -545,9 +552,14 @@ def parse_markdown(text: str):
                         toc,
                         Spacer(1, 8 * mm),
                         Paragraph(
-                            inline_markup(
-                                "**Fast reading path:** Short answer (page 3) -> 7-9 second staging rule (page 6) -> Applying this to the after-wipe policy (page 17) -> Decision factors and conclusion table (pages 22-23). "
-                                "Read the calculation and demo sections when you want to check the reasoning and evidence."
+                            (
+                                f'<b>Fast reading path</b><br/>'
+                                f'&#8226; <link href="#section-2" color="#{BLUE.hexval()[2:]}">Short answer (page 3)</link><br/>'
+                                f'&#8226; <link href="#section-10" color="#{BLUE.hexval()[2:]}">7-9 second staging rule (page 6)</link><br/>'
+                                f'&#8226; <link href="#section-23" color="#{BLUE.hexval()[2:]}">Applying this to the after-wipe policy (page 17)</link><br/>'
+                                f'&#8226; <link href="#section-29" color="#{BLUE.hexval()[2:]}">Decision factors (page 22)</link><br/>'
+                                f'&#8226; <link href="#section-34" color="#{BLUE.hexval()[2:]}">Conclusion and table (pages 23-24)</link><br/><br/>'
+                                'Read the calculation and demo sections when you want to check the reasoning and evidence.'
                             ),
                             quote,
                         ),

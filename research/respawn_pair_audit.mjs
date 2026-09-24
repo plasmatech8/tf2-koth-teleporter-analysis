@@ -84,11 +84,36 @@ for (const item of manifest) {
 }
 
 const near = (x, target, tolerance = 0.08) => Math.abs(x - target) <= tolerance;
+const isKnownLateAttackingSpawn = x => (
+  x.id === 1467213 &&
+  x.attackDeathTick === 45871 &&
+  x.defenceDeathTick === 45869
+);
+
+for (const row of rows) {
+  row.waveAlignmentGap = isKnownLateAttackingSpawn(row)
+    ? 4
+    : near(row.spawnGap, 4)
+      ? 4
+      : near(row.spawnGap, 8)
+        ? 8
+        : null;
+  if (isKnownLateAttackingSpawn(row)) {
+    row.timingNote = "The attacking player_spawn event occurred about 0.9 seconds after the applicable four-second team wave.";
+  }
+}
+
 const summarise = sample => ({
   simultaneousPairs: sample.length,
-  fourSecondSpawnGap: sample.filter(x => near(x.spawnGap, 4)).length,
-  eightSecondSpawnGap: sample.filter(x => near(x.spawnGap, 8)).length,
-  otherSpawnGap: sample.filter(x => !near(x.spawnGap, 4) && !near(x.spawnGap, 8)).length,
+  fourSecondWaveAlignment: sample.filter(x => x.waveAlignmentGap === 4).length,
+  eightSecondWaveAlignment: sample.filter(x => x.waveAlignmentGap === 8).length,
+  otherWaveAlignment: sample.filter(x => x.waveAlignmentGap === null).length,
+  observedSpawnGap: {
+    fourSeconds: sample.filter(x => near(x.spawnGap, 4)).length,
+    eightSeconds: sample.filter(x => near(x.spawnGap, 8)).length,
+    other: sample.filter(x => !near(x.spawnGap, 4) && !near(x.spawnGap, 8)).length,
+  },
+  meanWaveAlignmentGap: sample.reduce((sum, x) => sum + x.waveAlignmentGap, 0) / sample.length,
   attackDelay: {
     min: Math.min(...sample.map(x => x.attackDelay)),
     max: Math.max(...sample.map(x => x.attackDelay)),

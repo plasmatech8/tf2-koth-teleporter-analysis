@@ -12,12 +12,12 @@ const maxQueueWait = { l1: 1, l2: 1, l3: 1 };
 const scenarios = [
   { id: '1A', trades: 1, attack: [0], defence: [4], phase: '4-second difference' },
   { id: '1B', trades: 1, attack: [0], defence: [8], phase: '8-second difference' },
-  { id: '2A', trades: 2, attack: [0, 4], defence: [8, 8], phase: 'first pair: 8-second difference' },
-  { id: '2B', trades: 2, attack: [0, 4], defence: [4, 12], phase: 'first pair: 4-second difference' },
-  { id: '3A', trades: 3, attack: [0, 4, 8], defence: [8, 8, 16], phase: 'first pair: 8-second difference' },
-  { id: '3B', trades: 3, attack: [0, 4, 8], defence: [4, 12, 12], phase: 'first pair: 4-second difference' },
-  { id: '4A', trades: 4, attack: [0, 4, 8, 12], defence: [8, 8, 16, 16], phase: 'first pair: 8-second difference' },
-  { id: '4B', trades: 4, attack: [0, 4, 8, 12], defence: [4, 12, 12, 20], phase: 'first pair: 4-second difference' },
+  { id: '2A', trades: 2, attack: [0, 4], defence: [4, 12], phase: 'first pair: 4-second difference' },
+  { id: '2B', trades: 2, attack: [0, 4], defence: [8, 8], phase: 'first pair: 8-second difference' },
+  { id: '3A', trades: 3, attack: [0, 4, 8], defence: [4, 12, 12], phase: 'first pair: 4-second difference' },
+  { id: '3B', trades: 3, attack: [0, 4, 8], defence: [8, 8, 16], phase: 'first pair: 8-second difference' },
+  { id: '4A', trades: 4, attack: [0, 4, 8, 12], defence: [4, 12, 12, 20], phase: 'first pair: 4-second difference' },
+  { id: '4B', trades: 4, attack: [0, 4, 8, 12], defence: [8, 8, 16, 16], phase: 'first pair: 8-second difference' },
 ];
 
 function arrivals(spawns, map, infrastructure) {

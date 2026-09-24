@@ -76,7 +76,7 @@ def advantage_colour(margin):
     return POS3
 
 
-def render_explainer_timeline(name, title, subtitle, panels, tmin, tmax, tick, axis_title):
+def render_explainer_timeline(name, title, subtitle, panels, tmin, tmax, tick, axis_title, markers=None):
     """Render compact explainer figures in the same grammar as Figure 1."""
     W = 1800
     x0, x1 = 360, 1710
@@ -102,6 +102,22 @@ def render_explainer_timeline(name, title, subtitle, panels, tmin, tmax, tick, a
         x = sx(t)
         line(d, [(x, chart_top), (x, chart_bottom)], fill=GRID, width=1)
         text(d, (x, chart_bottom + 34), str(t), 20, fill=MUTED, anchor='ma')
+
+    for marker in markers or []:
+        x = sx(marker['time'])
+        marker_colour = marker.get('color', RED)
+        for y in range(chart_top, chart_bottom, 18):
+            line(d, [(x, y), (x, min(y + 9, chart_bottom))], fill=marker_colour, width=2)
+        if marker.get('kind') == 'death':
+            # A small drawn skull avoids relying on an emoji glyph.
+            d.ellipse((x - 12, chart_top - 33, x + 12, chart_top - 9),
+                      outline=marker_colour, width=3)
+            d.ellipse((x - 7, chart_top - 26, x - 3, chart_top - 22), fill=marker_colour)
+            d.ellipse((x + 3, chart_top - 26, x + 7, chart_top - 22), fill=marker_colour)
+            d.rectangle((x - 7, chart_top - 13, x + 7, chart_top - 6),
+                        outline=marker_colour, width=2)
+        text(d, (x + 19, chart_top - 18), marker['label'], 20,
+             fill=marker_colour, bold=True, anchor='lm')
 
     y_cursor = chart_top
     for panel_index, panel in enumerate(panels):
@@ -148,12 +164,144 @@ def render_explainer_timeline(name, title, subtitle, panels, tmin, tmax, tick, a
     save(img, name)
 
 
+def render_rebuild_readiness_timeline():
+    """Show the 7-9 second rule while preserving the report's timeline grammar."""
+    name = 'step-4-rebuild-readiness-timeline.png'
+    W, H = 1800, 1370
+    img = Image.new('RGB', (W, H), BG)
+    d = ImageDraw.Draw(img)
+
+    text(d, (90, 52),
+         'The 7-9 second staging rule: minimum time before the next relevant death',
+         38, bold=True)
+    text(d, (90, 104),
+         'About 7 seconds under mean respawn timing and 9 seconds for the fastest return. Later deaths also work.',
+         25, fill=MUTED)
+    text(d, (90, 140),
+         'After respawning, the player walks 2.0 seconds from spawn to the tele entrance; the model allows waiting there for up to 1.0 second.',
+         21, fill=MUTED)
+
+    x0, x1 = 385, 1710
+    tmin, tmax = 0.0, 33.0
+    sx = lambda t: x0 + (x1 - x0) * (t - tmin) / (tmax - tmin)
+    chart_top, chart_bottom = 180, 1240
+
+    for tick_value in range(0, 34, 3):
+        x = sx(tick_value)
+        line(d, [(x, chart_top), (x, chart_bottom)], fill=GRID, width=1)
+        text(d, (x, chart_bottom + 34), str(tick_value), 20, fill=MUTED, anchor='ma')
+
+    ready_x = sx(21.1)
+    for y in range(chart_top, chart_bottom, 18):
+        line(d, [(ready_x, y), (ready_x, min(y + 9, chart_bottom))], fill=GOLD, width=2)
+    text(d, (ready_x + 13, chart_top + 15), 'L1 ready: 21.1s', 20,
+         fill=GOLD, bold=True, anchor='ls')
+
+    def skull(x, y):
+        d.ellipse((x - 12, y - 14, x + 12, y + 10), outline=RED, width=3)
+        d.ellipse((x - 7, y - 7, x - 3, y - 3), fill=RED)
+        d.ellipse((x + 3, y - 7, x + 7, y - 3), fill=RED)
+        d.rectangle((x - 7, y + 6, x + 7, y + 13), outline=RED, width=2)
+
+    def cross(x, y):
+        line(d, [(x - 9, y - 9), (x + 9, y + 9)], fill=RED, width=5)
+        line(d, [(x - 9, y + 9), (x + 9, y - 9)], fill=RED, width=5)
+
+    def draw_panel(top, title, death, respawn, entrance, arrival,
+                   walk_arrival, mode, wait_needed=None):
+        text(d, (90, top), title, 28, bold=True)
+        construction_y = top + 74
+        returner_y = top + 142
+        gain_y = top + 213
+
+        text(d, (x0 - 25, construction_y), 'L1 construction', 21,
+             fill=MUTED, anchor='ra')
+        line(d, [(sx(0), construction_y), (sx(21.1), construction_y)],
+             fill=GOLD, width=14)
+        d.ellipse((sx(0) - 7, construction_y - 7, sx(0) + 7, construction_y + 7),
+                  outline=MUTED, width=2)
+        d.ellipse((sx(21.1) - 8, construction_y - 8,
+                   sx(21.1) + 8, construction_y + 8), fill=GOLD)
+
+        text(d, (x0 - 25, returner_y), 'Returner', 21,
+             fill=MUTED, anchor='ra')
+        line(d, [(sx(death), returner_y), (sx(respawn), returner_y)],
+             fill=GREY, width=18)
+        skull(sx(death), returner_y)
+        d.ellipse((sx(respawn) - 8, returner_y - 8,
+                   sx(respawn) + 8, returner_y + 8), outline=INK, width=3)
+        line(d, [(sx(respawn), returner_y), (sx(arrival), returner_y)],
+             fill=MUTED, width=3)
+
+        if mode == 'tele':
+            d.ellipse((sx(entrance) - 5, returner_y - 5,
+                       sx(entrance) + 5, returner_y + 5), fill=MUTED)
+        else:
+            d.ellipse((sx(entrance) - 5, returner_y - 5,
+                       sx(entrance) + 5, returner_y + 5), fill=RED)
+            cross(sx(entrance), returner_y - 23)
+            for dash_x in range(int(sx(entrance)), int(sx(21.1)), 16):
+                line(d, [(dash_x, returner_y + 21),
+                         (min(dash_x + 8, sx(21.1)), returner_y + 21)],
+                     fill=RED, width=2)
+            text(d, (sx(21.1), returner_y + 26),
+                 f'wait needed {wait_needed:.1f}s; model allows 1.0s',
+                 17, fill=RED, bold=True, anchor='rt')
+
+        # Thick blue bars retain their established meaning: presence at the front line.
+        d.rounded_rectangle((sx(arrival), returner_y - 15,
+                             sx(tmax), returner_y + 15), radius=7, fill=BLUE)
+        d.ellipse((sx(arrival) - 8, returner_y - 8,
+                   sx(arrival) + 8, returner_y + 8), fill=BLUE)
+        text(d, (sx(death), returner_y - 25), f'death {death:.1f}s',
+             18, fill=RED, bold=True, anchor='ms')
+        text(d, ((sx(death) + sx(respawn)) / 2, returner_y),
+             'dead / awaiting wave', 17, fill=BG, bold=True, anchor='mm')
+        text(d, (sx(respawn), returner_y - 25), f'spawn {respawn:.1f}s',
+             18, fill=INK, anchor='ms')
+        text(d, (sx(arrival) + 10, returner_y - 24),
+             f'{arrival:.1f}s ({mode})', 19, fill=BLUE, bold=True, anchor='ls')
+
+        text(d, (x0 - 25, gain_y), 'L1 versus walking', 21,
+             fill=MUTED, anchor='ra')
+        if mode == 'tele':
+            d.rectangle((sx(arrival), gain_y - 22,
+                         sx(walk_arrival), gain_y + 22), fill=POS1)
+            text(d, ((sx(arrival) + sx(walk_arrival)) / 2, gain_y),
+                 f'+1 for {walk_arrival - arrival:.1f}s', 20,
+                 fill='#17231c', bold=True, anchor='mm')
+        else:
+            text(d, (sx(arrival) + 10, gain_y), 'walks: no tele saving',
+                 19, fill=MUTED, bold=True, anchor='lm')
+
+    draw_panel(
+        200,
+        'Mean-respawn boundary - death 6.7 seconds after placement',
+        death=6.7, respawn=19.1, entrance=21.1, arrival=25.7,
+        walk_arrival=31.1, mode='tele')
+    draw_panel(
+        545,
+        'Fastest-respawn boundary - death 8.7 seconds after placement',
+        death=8.7, respawn=19.1, entrance=21.1, arrival=25.7,
+        walk_arrival=31.1, mode='tele')
+    draw_panel(
+        890,
+        'Too-early example - death 5.0 seconds after placement',
+        death=5.0, respawn=17.4, entrance=19.4, arrival=29.4,
+        walk_arrival=29.4, mode='walks', wait_needed=1.7)
+
+    text(d, ((x0 + x1) / 2, H - 52),
+         'Seconds after exit placement; open circle = respawn; small dot = tele entrance; thick blue = at the front line',
+         23, fill=MUTED, anchor='mm')
+    save(img, name)
+
+
 # Figure 1: attacker / advantage / defender lanes.
-s = get_scenario('product', '2A')
+s = get_scenario('product', '2B')
 W, H = 1800, 1240
 img = Image.new('RGB', (W, H), BG)
 d = ImageDraw.Draw(img)
-text(d, (90, 58), 'Scenario 2A — two player trades; both defenders respawn together', 40, bold=True)
+text(d, (90, 58), 'Scenario 2B — two player trades; both defenders respawn together', 40, bold=True)
 text(d, (90, 112), 'Returning attackers exceed returning defenders by +2 for 4.0 seconds with retained L3.', 27, fill=MUTED)
 
 x0, x1 = 360, 1700
@@ -285,44 +433,14 @@ render_explainer_timeline(
     'Seconds after the paired deaths; the centre strip shows who reaches the front first',
 )
 
-render_explainer_timeline(
-    'step-4-rebuild-readiness-timeline.png',
-    'Whether the rebuilt L1 is ready for the first useful return',
-    'The reference point is the rider reaching the entrance; construction need not begin at the wipe.',
-    [
-        {
-            'title': 'Ready at the entrance: construction began at least 21.1 seconds earlier',
-            'rows': [
-                {'type': 'player', 'label': 'L1 construction', 'spawn': -21.1, 'arrival': 0.0,
-                 'team': 'neutral', 'kind': 'process', 'note': 'ready at 0.0s'},
-                {'type': 'player', 'label': 'Returner', 'spawn': -2.0, 'entrance': 0.0, 'arrival': 4.6,
-                 'team': 'attack', 'note': '4.6s (tele)'},
-                {'type': 'band', 'label': 'L1 versus walking',
-                 'intervals': [{'start': 4.6, 'end': 10.0, 'margin': 1, 'label': '+1 for 5.4s'}]},
-            ],
-        },
-        {
-            'title': 'Illustrative late placement: construction began only 15 seconds earlier',
-            'rows': [
-                {'type': 'player', 'label': 'L1 construction', 'spawn': -15.0, 'arrival': 6.1,
-                 'team': 'neutral', 'kind': 'process', 'note': 'ready at +6.1s'},
-                {'type': 'player', 'label': 'Returner', 'spawn': -2.0, 'arrival': 10.0,
-                 'team': 'attack', 'note': '10.0s (walks)'},
-                {'type': 'band', 'label': 'L1 versus walking',
-                 'intervals': [{'start': 4.6, 'end': 10.0, 'margin': 0, 'label': 'no saved arrival'}]},
-            ],
-        },
-    ],
-    -24, 14, 4,
-    'Seconds from the first relevant arrival at the tele entrance',
-)
+render_rebuild_readiness_timeline()
 
-shared = get_scenario('product', '4A')
+shared = get_scenario('product', '4B')
 
 
-def shared_attack_rows(level):
+def shared_attack_rows(level, scenario=shared):
     rows = []
-    for item in shared['alternatives'][level]['attack']:
+    for item in scenario['alternatives'][level]['attack']:
         mode = 'walks' if item['mode'] == 'walk' else 'tele'
         row = {
             'type': 'player',
@@ -336,7 +454,7 @@ def shared_attack_rows(level):
             row['entrance'] = item['entranceArrival']
         rows.append(row)
     net_intervals = []
-    for interval in shared['alternatives'][level]['net']['intervals']:
+    for interval in scenario['alternatives'][level]['net']['intervals']:
         if (net_intervals and net_intervals[-1]['margin'] == interval['margin']
                 and abs(net_intervals[-1]['end'] - interval['start']) < 1e-6):
             net_intervals[-1]['end'] = interval['end']
@@ -350,9 +468,9 @@ def shared_attack_rows(level):
     return rows
 
 
-def shared_defence_rows():
+def shared_defence_rows(scenario=shared):
     rows = []
-    for item in shared['defence']:
+    for item in scenario['defence']:
         mode = 'walks' if item['mode'] == 'walk' else 'tele'
         row = {
             'type': 'player',
@@ -370,7 +488,7 @@ def shared_defence_rows():
 
 render_explainer_timeline(
     'step-5-shared-tele-timeline.png',
-    'Product scenario 4A - shared-tele queues against defender L3',
+    'Product scenario 4B - shared-tele queues against defender L3',
     'Each centre strip shows attacking returners minus defending returners at the front.',
     [
         {'title': 'Attacker L3 - every successive return is served', 'rows': shared_attack_rows('l3')},
@@ -381,6 +499,145 @@ render_explainer_timeline(
     0, 30, 4,
     'Seconds after the first attacking respawn; thick bars begin at front-line arrival',
 )
+
+
+# Expanded appendix figures: the same four attacker states under both defender-wave alignments.
+for scenario_id, alignment_label, defender_offsets in (
+        ('4A', 'four-second defender alignment', '4, 12, 12 and 20'),
+        ('4B', 'eight-second defender alignment', '8, 8, 16 and 16')):
+    scenario = get_scenario('product', scenario_id)
+    render_explainer_timeline(
+        f'product-scenario-{scenario_id.lower()}-shared-tele-with-no-tele.png',
+        f'Product scenario {scenario_id} - {alignment_label}',
+        'Each centre strip shows attacking returners minus defending returners at the front.',
+        [
+            {'title': 'Attacker L3 - every successive return is served',
+             'rows': shared_attack_rows('l3', scenario)},
+            {'title': 'Attacker L2 - the second and fourth returns walk',
+             'rows': shared_attack_rows('l2', scenario)},
+            {'title': 'Attacker L1 - the first and fourth returns are served',
+             'rows': shared_attack_rows('l1', scenario)},
+            {'title': 'Attacker no tele - every return walks',
+             'rows': shared_attack_rows('walk', scenario)},
+            {'title': f'Defender L3 - respawn offsets {defender_offsets}',
+             'rows': shared_defence_rows(scenario)},
+        ],
+        0, 30, 4,
+        'Seconds after the first attacking respawn; red means defenders have more returners at the front',
+    )
+
+
+# Appendix sensitivity: widen successive attacking returns from four to eight seconds
+# while keeping Product routes and defender L3 fixed.
+def spaced_return_rows(spawns, level):
+    route = MODEL['inputs']['maps']['product']
+    walk_time = route['walk']
+    entrance_time = route['entrance']
+    tele_travel_after_entrance = MODEL['inputs']['transit'] + route['exitToFront']
+    cycles = MODEL['inputs']['cycles']
+    ready = float('-inf')
+    rows = []
+    arrivals = []
+    for player, spawn in enumerate(spawns, 1):
+        if level == 'walk':
+            arrival = spawn + walk_time
+            mode = 'walk'
+            entrance = None
+        else:
+            entrance = spawn + entrance_time
+            use = max(entrance, ready)
+            tele_arrival = use + tele_travel_after_entrance
+            walk_arrival = spawn + walk_time
+            if use - entrance <= 1.0 and tele_arrival < walk_arrival:
+                arrival = tele_arrival
+                mode = level
+                ready = use + cycles[level]
+            else:
+                arrival = walk_arrival
+                mode = 'walk'
+                entrance = None
+        arrivals.append(arrival)
+        row = {
+            'type': 'player',
+            'label': f'A{player}',
+            'spawn': spawn,
+            'arrival': arrival,
+            'team': 'attack',
+            'note': f"{arrival:.1f}s {'walks' if mode == 'walk' else 'tele'}",
+        }
+        if entrance is not None:
+            row['entrance'] = entrance
+        rows.append(row)
+    return rows, arrivals
+
+
+def spaced_defence_rows(spawns):
+    rows, arrivals = spaced_return_rows(spawns, 'l3')
+    for player, row in enumerate(rows, 1):
+        row['label'] = f'D{player}'
+        row['team'] = 'defend'
+    return rows, arrivals
+
+
+def arrival_margin_intervals(attack_arrivals, defence_arrivals):
+    changes = {}
+    for arrival in attack_arrivals:
+        changes[arrival] = changes.get(arrival, 0) + 1
+    for arrival in defence_arrivals:
+        changes[arrival] = changes.get(arrival, 0) - 1
+    times = sorted(changes)
+    margin = 0
+    intervals = []
+    for index, start in enumerate(times):
+        margin += changes[start]
+        if index + 1 >= len(times):
+            continue
+        end = times[index + 1]
+        if end <= start:
+            continue
+        if intervals and intervals[-1]['margin'] == margin and abs(intervals[-1]['end'] - start) < 1e-6:
+            intervals[-1]['end'] = end
+        else:
+            interval = {'start': start, 'end': end, 'margin': margin}
+            if margin == 0:
+                interval['label'] = 'even'
+            intervals.append(interval)
+    return intervals
+
+
+attacker_spawns_8s = [0.0, 8.0, 16.0, 24.0]
+for scenario_id, alignment_label, defender_spawns in (
+        ('A', 'four-second defender alignment', [4.0, 12.0, 20.0, 28.0]),
+        ('B', 'eight-second defender alignment', [8.0, 16.0, 24.0, 32.0])):
+    defence_rows, defence_arrivals = spaced_defence_rows(defender_spawns)
+    panels = []
+    totals = {}
+    for level, panel_title in (
+            ('l3', 'Attacker L3 - every eight-second return is served'),
+            ('l2', 'Attacker L2 - every eight-second return is served'),
+            ('l1', 'Attacker L1 - the first and third returns are served'),
+            ('walk', 'Attacker no tele - every return walks')):
+        attack_rows, attack_arrivals = spaced_return_rows(attacker_spawns_8s, level)
+        intervals = arrival_margin_intervals(attack_arrivals, defence_arrivals)
+        totals[level] = sum((item['end'] - item['start']) * item['margin'] for item in intervals)
+        attack_rows.append({
+            'type': 'band',
+            'label': 'advantage vs defender L3',
+            'intervals': intervals,
+        })
+        panels.append({'title': panel_title, 'rows': attack_rows})
+    panels.append({
+        'title': f"Defender L3 - respawn offsets {', '.join(str(int(x)) for x in defender_spawns[:-1])} and {int(defender_spawns[-1])}",
+        'rows': defence_rows,
+    })
+    render_explainer_timeline(
+        f'product-eight-second-return-spacing-{scenario_id.lower()}.png',
+        f'Product - four paired trades eight seconds apart; {alignment_label}',
+        f"Attacking returns are eight seconds apart; totals: L3/L2 {totals['l3']:+.1f}, L1 {totals['l1']:+.1f}, no tele {totals['walk']:+.1f} p-s.",
+        panels,
+        0, 44, 4,
+        'Seconds after the first attacking respawn; only attacking return spacing changed',
+    )
 
 
 # Figure 2: direct Product L3-minus-L1 timelines.
@@ -467,7 +724,7 @@ W, H = 1800, 1230
 img = Image.new('RGB', (W, H), BG)
 d = ImageDraw.Draw(img)
 text(d, (90, 55), 'August 22 Ashville — potential earlier front-line presence', 40, bold=True)
-text(d, (90, 108), 'Each bar is time the retained-L3 counterfactual supplies a player before the recorded arrival.', 26, fill=MUTED)
+text(d, (90, 108), 'Each bar runs from a modelled retained-L3 arrival to a modelled no-tele walking arrival.', 26, fill=MUTED)
 x0, x1 = 300, 1710
 sx = lambda t: x0 + (x1 - x0) * (t - (start - 2)) / ((restored + 4) - (start - 2))
 

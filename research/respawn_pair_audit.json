@@ -2,9 +2,15 @@
   "summary": {
     "allMapVersions": {
       "simultaneousPairs": 209,
-      "fourSecondSpawnGap": 122,
-      "eightSecondSpawnGap": 86,
-      "otherSpawnGap": 1,
+      "fourSecondWaveAlignment": 123,
+      "eightSecondWaveAlignment": 86,
+      "otherWaveAlignment": 0,
+      "observedSpawnGap": {
+        "fourSeconds": 122,
+        "eightSeconds": 86,
+        "other": 1
+      },
+      "meanWaveAlignmentGap": 5.645933014354067,
       "attackDelay": {
         "min": 10.439999999999998,
         "max": 15.555000000000064
@@ -16,9 +22,15 @@
     },
     "productAndAshvilleFinal1": {
       "simultaneousPairs": 199,
-      "fourSecondSpawnGap": 116,
-      "eightSecondSpawnGap": 83,
-      "otherSpawnGap": 0,
+      "fourSecondWaveAlignment": 116,
+      "eightSecondWaveAlignment": 83,
+      "otherWaveAlignment": 0,
+      "observedSpawnGap": {
+        "fourSeconds": 116,
+        "eightSeconds": 83,
+        "other": 0
+      },
+      "meanWaveAlignmentGap": 5.668341708542713,
       "attackDelay": {
         "min": 10.439999999999998,
         "max": 14.460000000000036
@@ -39,7 +51,8 @@
       "deathGap": 0,
       "attackDelay": 11.700000000000045,
       "defenceDelay": 15.705000000000041,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1503848,
@@ -50,7 +63,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 12.975000000000023,
       "defenceDelay": 17.07000000000005,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1503848,
@@ -61,7 +75,8 @@
       "deathGap": 0,
       "attackDelay": 13.919999999999959,
       "defenceDelay": 17.924999999999955,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1503848,
@@ -72,7 +87,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 11.490000000000009,
       "defenceDelay": 15.389999999999986,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1503848,
@@ -83,7 +99,8 @@
       "deathGap": 0.10499999999979082,
       "attackDelay": 13.259999999999991,
       "defenceDelay": 17.36999999999989,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1503848,
@@ -94,7 +111,8 @@
       "deathGap": 0,
       "attackDelay": 13.019999999999982,
       "defenceDelay": 17.02500000000009,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1502837,
@@ -105,7 +123,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 14.204999999999984,
       "defenceDelay": 18.180000000000007,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1502837,
@@ -116,7 +135,8 @@
       "deathGap": 0.12000000000011823,
       "attackDelay": 11.579999999999927,
       "defenceDelay": 15.705000000000155,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1502837,
@@ -127,7 +147,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 13.00500000000011,
       "defenceDelay": 21.060000000000173,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1502837,
@@ -138,7 +159,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 11.295000000000073,
       "defenceDelay": 19.335000000000036,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1502830,
@@ -149,7 +171,8 @@
       "deathGap": 0.07499999999998863,
       "attackDelay": 11.445000000000007,
       "defenceDelay": 15.524999999999991,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1502830,
@@ -160,7 +183,8 @@
       "deathGap": 0,
       "attackDelay": 12.17999999999995,
       "defenceDelay": 20.18999999999994,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1502830,
@@ -171,7 +195,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 13.125,
       "defenceDelay": 17.00999999999999,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1502830,
@@ -182,7 +207,8 @@
       "deathGap": 0,
       "attackDelay": 13.725000000000023,
       "defenceDelay": 17.730000000000018,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1502334,
@@ -193,7 +219,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 11.745000000000005,
       "defenceDelay": 19.649999999999977,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1502334,
@@ -204,7 +231,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 13.470000000000027,
       "defenceDelay": 17.58000000000004,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1502334,
@@ -215,7 +243,8 @@
       "deathGap": 0.06000000000005912,
       "attackDelay": 11.745000000000005,
       "defenceDelay": 15.68999999999994,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1501896,
@@ -226,7 +255,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 12.134999999999991,
       "defenceDelay": 20.07000000000005,
-      "spawnGap": 8.010000000000105
+      "spawnGap": 8.010000000000105,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1501896,
@@ -237,7 +267,8 @@
       "deathGap": 0.04499999999995907,
       "attackDelay": 12.134999999999991,
       "defenceDelay": 20.190000000000055,
-      "spawnGap": 8.010000000000105
+      "spawnGap": 8.010000000000105,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1501896,
@@ -248,7 +279,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 14.309999999999945,
       "defenceDelay": 22.214999999999918,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1501896,
@@ -259,7 +291,8 @@
       "deathGap": 0.014999999999986358,
       "attackDelay": 11.44500000000005,
       "defenceDelay": 19.469999999999914,
-      "spawnGap": 8.009999999999877
+      "spawnGap": 8.009999999999877,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1496856,
@@ -270,7 +303,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 12.509999999999991,
       "defenceDelay": 16.620000000000005,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496366,
@@ -281,7 +315,8 @@
       "deathGap": 0,
       "attackDelay": 13.425000000000068,
       "defenceDelay": 17.430000000000064,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496366,
@@ -292,7 +327,8 @@
       "deathGap": 0,
       "attackDelay": 13.425000000000068,
       "defenceDelay": 17.430000000000064,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496366,
@@ -303,7 +339,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 14.144999999999982,
       "defenceDelay": 22.230000000000018,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1496366,
@@ -314,7 +351,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 13.785000000000082,
       "defenceDelay": 21.840000000000146,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1496366,
@@ -325,7 +363,8 @@
       "deathGap": 0.11999999999989086,
       "attackDelay": 11.894999999999982,
       "defenceDelay": 16.019999999999982,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496366,
@@ -336,7 +375,8 @@
       "deathGap": 0.044999999999845386,
       "attackDelay": 10.815000000000055,
       "defenceDelay": 14.865000000000009,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496366,
@@ -347,7 +387,8 @@
       "deathGap": 0.044999999999845386,
       "attackDelay": 13.230000000000018,
       "defenceDelay": 17.279999999999973,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496353,
@@ -358,7 +399,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 11.490000000000009,
       "defenceDelay": 15.585000000000036,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496353,
@@ -369,7 +411,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 12.509999999999991,
       "defenceDelay": 16.409999999999968,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496353,
@@ -380,7 +423,8 @@
       "deathGap": 0.014999999999986358,
       "attackDelay": 13.81499999999994,
       "defenceDelay": 17.834999999999923,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496344,
@@ -391,7 +435,8 @@
       "deathGap": 0.030000000000001137,
       "attackDelay": 13.050000000000011,
       "defenceDelay": 17.069999999999993,
-      "spawnGap": 3.9899999999999807
+      "spawnGap": 3.9899999999999807,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496344,
@@ -402,7 +447,8 @@
       "deathGap": 0.08999999999997499,
       "attackDelay": 10.920000000000016,
       "defenceDelay": 14.819999999999993,
-      "spawnGap": 3.9899999999999523
+      "spawnGap": 3.9899999999999523,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496344,
@@ -413,7 +459,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 13.529999999999973,
       "defenceDelay": 21.54000000000002,
-      "spawnGap": 8.04000000000002
+      "spawnGap": 8.04000000000002,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1496344,
@@ -424,7 +471,8 @@
       "deathGap": 0,
       "attackDelay": 13.259999999999991,
       "defenceDelay": 17.279999999999973,
-      "spawnGap": 4.019999999999982
+      "spawnGap": 4.019999999999982,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1496344,
@@ -435,7 +483,8 @@
       "deathGap": 0,
       "attackDelay": 13.169999999999845,
       "defenceDelay": 21.179999999999836,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1495831,
@@ -446,7 +495,8 @@
       "deathGap": 0.11999999999989086,
       "attackDelay": 12.989999999999782,
       "defenceDelay": 16.875,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494499,
@@ -457,7 +507,8 @@
       "deathGap": 0.045000000000015916,
       "attackDelay": 10.784999999999968,
       "defenceDelay": 14.83499999999998,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494499,
@@ -468,7 +519,8 @@
       "deathGap": 0.08999999999997499,
       "attackDelay": 14.400000000000034,
       "defenceDelay": 18.495000000000005,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494499,
@@ -479,7 +531,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 12.269999999999982,
       "defenceDelay": 20.38499999999999,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1494499,
@@ -490,7 +543,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 13.800000000000068,
       "defenceDelay": 17.910000000000082,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494499,
@@ -501,7 +555,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 13.18500000000006,
       "defenceDelay": 17.220000000000027,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494499,
@@ -512,7 +567,8 @@
       "deathGap": 0.06000000000005912,
       "attackDelay": 13.365000000000009,
       "defenceDelay": 21.31499999999994,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1494499,
@@ -523,7 +579,8 @@
       "deathGap": 0.014999999999986358,
       "attackDelay": 13.769999999999982,
       "defenceDelay": 17.789999999999964,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494499,
@@ -534,7 +591,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 10.904999999999973,
       "defenceDelay": 14.985000000000127,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494495,
@@ -545,7 +603,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 12.629999999999995,
       "defenceDelay": 16.514999999999986,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494495,
@@ -556,7 +615,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 14.220000000000027,
       "defenceDelay": 22.200000000000045,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1494495,
@@ -567,7 +627,8 @@
       "deathGap": 0.014999999999986358,
       "attackDelay": 13.409999999999968,
       "defenceDelay": 17.40000000000009,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1494495,
@@ -578,7 +639,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 11.100000000000136,
       "defenceDelay": 15.014999999999986,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492645,
@@ -589,7 +651,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 12.314999999999998,
       "defenceDelay": 20.38499999999999,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1492640,
@@ -600,7 +663,8 @@
       "deathGap": 0.09000000000000341,
       "attackDelay": 12.225000000000023,
       "defenceDelay": 16.32000000000002,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492640,
@@ -611,7 +675,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 10.69500000000005,
       "defenceDelay": 14.82000000000005,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492640,
@@ -622,7 +687,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 11.879999999999995,
       "defenceDelay": 15.975000000000023,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492640,
@@ -633,7 +699,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 12.360000000000127,
       "defenceDelay": 16.289999999999964,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492640,
@@ -644,7 +711,8 @@
       "deathGap": 0.015000000000100044,
       "attackDelay": 12.314999999999827,
       "defenceDelay": 20.339999999999918,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1492640,
@@ -655,7 +723,8 @@
       "deathGap": 0.0749999999998181,
       "attackDelay": 12.3599999999999,
       "defenceDelay": 16.289999999999964,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492640,
@@ -666,7 +735,8 @@
       "deathGap": 0.01499999999987267,
       "attackDelay": 11.52000000000021,
       "defenceDelay": 15.539999999999964,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492192,
@@ -677,7 +747,8 @@
       "deathGap": 0,
       "attackDelay": 11.295000000000016,
       "defenceDelay": 15.300000000000011,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492192,
@@ -688,7 +759,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 11.639999999999986,
       "defenceDelay": 15.764999999999986,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1492192,
@@ -699,7 +771,8 @@
       "deathGap": 0.04499999999995907,
       "attackDelay": 14.174999999999955,
       "defenceDelay": 18.13499999999999,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1491776,
@@ -710,7 +783,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 12.675000000000068,
       "defenceDelay": 20.805000000000064,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1491776,
@@ -721,7 +795,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 13.335000000000036,
       "defenceDelay": 21.3900000000001,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1489883,
@@ -732,7 +807,8 @@
       "deathGap": 0.030000000000001137,
       "attackDelay": 13.289999999999992,
       "defenceDelay": 21.269999999999996,
-      "spawnGap": 8.010000000000005
+      "spawnGap": 8.010000000000005,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1489883,
@@ -743,7 +819,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 12.225000000000023,
       "defenceDelay": 20.264999999999986,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1489883,
@@ -754,7 +831,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 12.134999999999991,
       "defenceDelay": 20.264999999999986,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1489883,
@@ -765,7 +843,8 @@
       "deathGap": 0.08999999999991815,
       "attackDelay": 14.460000000000036,
       "defenceDelay": 18.555000000000064,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1489883,
@@ -776,7 +855,8 @@
       "deathGap": 0.11999999999989086,
       "attackDelay": 11.625,
       "defenceDelay": 19.5150000000001,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1489883,
@@ -787,7 +867,8 @@
       "deathGap": 0.060000000000172804,
       "attackDelay": 10.60499999999979,
       "defenceDelay": 14.670000000000073,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1489883,
@@ -798,7 +879,8 @@
       "deathGap": 0.05999999999994543,
       "attackDelay": 11.115000000000009,
       "defenceDelay": 19.184999999999945,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1489385,
@@ -809,7 +891,8 @@
       "deathGap": 0.030000000000001137,
       "attackDelay": 13.875,
       "defenceDelay": 17.849999999999994,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1489385,
@@ -820,7 +903,8 @@
       "deathGap": 0,
       "attackDelay": 13.920000000000016,
       "defenceDelay": 17.92500000000001,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1489385,
@@ -831,7 +915,8 @@
       "deathGap": 0.03000000000002956,
       "attackDelay": 11.819999999999993,
       "defenceDelay": 19.799999999999955,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1489385,
@@ -842,7 +927,8 @@
       "deathGap": 0,
       "attackDelay": 13.935000000000002,
       "defenceDelay": 17.939999999999998,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1489385,
@@ -853,7 +939,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 11.504999999999995,
       "defenceDelay": 15.629999999999995,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1489376,
@@ -864,7 +951,8 @@
       "deathGap": 0.030000000000001137,
       "attackDelay": 13.185000000000002,
       "defenceDelay": 21.225000000000023,
-      "spawnGap": 8.01000000000002
+      "spawnGap": 8.01000000000002,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1489376,
@@ -875,7 +963,8 @@
       "deathGap": 0.014999999999986358,
       "attackDelay": 13.095000000000027,
       "defenceDelay": 17.11500000000001,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1489376,
@@ -886,7 +975,8 @@
       "deathGap": 0,
       "attackDelay": 11.535000000000082,
       "defenceDelay": 15.539999999999964,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1488924,
@@ -897,7 +987,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 13.199999999999989,
       "defenceDelay": 21.314999999999998,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1488924,
@@ -908,7 +999,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 10.740000000000009,
       "defenceDelay": 18.870000000000005,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1488924,
@@ -919,7 +1011,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 11.100000000000023,
       "defenceDelay": 15.180000000000064,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1488924,
@@ -930,7 +1023,8 @@
       "deathGap": 0.014999999999986358,
       "attackDelay": 12.990000000000009,
       "defenceDelay": 20.985000000000014,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1487058,
@@ -941,7 +1035,8 @@
       "deathGap": 0,
       "attackDelay": 13.230000000000018,
       "defenceDelay": 17.235000000000014,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1487058,
@@ -952,7 +1047,8 @@
       "deathGap": 0.10499999999998977,
       "attackDelay": 11.940000000000026,
       "defenceDelay": 16.05000000000001,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1487058,
@@ -963,7 +1059,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 11.940000000000026,
       "defenceDelay": 15.88500000000002,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1487058,
@@ -974,7 +1071,8 @@
       "deathGap": 0.08999999999997499,
       "attackDelay": 14.205000000000041,
       "defenceDelay": 18.30000000000001,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1487058,
@@ -985,7 +1083,8 @@
       "deathGap": 0.015000000000100044,
       "attackDelay": 13.260000000000105,
       "defenceDelay": 21.254999999999995,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1487058,
@@ -996,7 +1095,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 14.025000000000091,
       "defenceDelay": 17.9849999999999,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1486538,
@@ -1007,7 +1107,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 12.825000000000017,
       "defenceDelay": 20.89500000000001,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1486538,
@@ -1018,7 +1119,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 11.370000000000005,
       "defenceDelay": 15.450000000000045,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1486538,
@@ -1029,7 +1131,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 13.620000000000005,
       "defenceDelay": 21.659999999999968,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1486538,
@@ -1040,7 +1143,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 13.620000000000005,
       "defenceDelay": 21.659999999999968,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1486538,
@@ -1051,7 +1155,8 @@
       "deathGap": 0.030000000000086402,
       "attackDelay": 11.235000000000014,
       "defenceDelay": 15.270000000000095,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1486538,
@@ -1062,7 +1167,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 14.144999999999982,
       "defenceDelay": 18.17999999999995,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1486538,
@@ -1073,7 +1179,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 10.649999999999977,
       "defenceDelay": 14.534999999999968,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1486538,
@@ -1084,7 +1191,8 @@
       "deathGap": 0.0749999999998181,
       "attackDelay": 12.690000000000055,
       "defenceDelay": 16.769999999999982,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1486538,
@@ -1095,7 +1203,8 @@
       "deathGap": 0.08999999999991815,
       "attackDelay": 11.36999999999989,
       "defenceDelay": 15.285000000000082,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1485728,
@@ -1106,7 +1215,8 @@
       "deathGap": 0.030000000000001137,
       "attackDelay": 11.474999999999994,
       "defenceDelay": 19.455000000000013,
-      "spawnGap": 8.01000000000002
+      "spawnGap": 8.01000000000002,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1485728,
@@ -1117,7 +1227,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 11.205000000000041,
       "defenceDelay": 15.150000000000034,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1485728,
@@ -1128,7 +1239,8 @@
       "deathGap": 0.04499999999995907,
       "attackDelay": 11.325000000000045,
       "defenceDelay": 15.375,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1485728,
@@ -1139,7 +1251,8 @@
       "deathGap": 0.06000000000005912,
       "attackDelay": 13.019999999999982,
       "defenceDelay": 17.085000000000036,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1485728,
@@ -1150,7 +1263,8 @@
       "deathGap": 0.01499999999987267,
       "attackDelay": 13.920000000000073,
       "defenceDelay": 21.944999999999936,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1482904,
@@ -1161,7 +1275,8 @@
       "deathGap": 0.044999999999987494,
       "attackDelay": 13.155000000000001,
       "defenceDelay": 21.120000000000005,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1482904,
@@ -1172,7 +1287,8 @@
       "deathGap": 0.08999999999991815,
       "attackDelay": 11.895000000000095,
       "defenceDelay": 15.990000000000009,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1482904,
@@ -1183,7 +1299,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 12.254999999999995,
       "defenceDelay": 16.36500000000001,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1482904,
@@ -1194,7 +1311,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 13.18500000000006,
       "defenceDelay": 17.220000000000027,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1482904,
@@ -1205,7 +1323,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 14.085000000000036,
       "defenceDelay": 22.004999999999995,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1477036,
@@ -1216,7 +1335,8 @@
       "deathGap": 0.07500000000000284,
       "attackDelay": 10.530000000000001,
       "defenceDelay": 18.61500000000001,
-      "spawnGap": 8.010000000000005
+      "spawnGap": 8.010000000000005,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1477036,
@@ -1227,7 +1347,8 @@
       "deathGap": 0.045000000000015916,
       "attackDelay": 10.620000000000005,
       "defenceDelay": 18.58499999999998,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1477036,
@@ -1238,7 +1359,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 13.034999999999968,
       "defenceDelay": 21.150000000000034,
-      "spawnGap": 8.010000000000048
+      "spawnGap": 8.010000000000048,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1477036,
@@ -1249,7 +1371,8 @@
       "deathGap": 0.06000000000005912,
       "attackDelay": 11.114999999999895,
       "defenceDelay": 19.18500000000006,
-      "spawnGap": 8.010000000000105
+      "spawnGap": 8.010000000000105,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1477036,
@@ -1260,7 +1383,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 12.839999999999918,
       "defenceDelay": 20.924999999999955,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1477036,
@@ -1271,7 +1395,8 @@
       "deathGap": 0,
       "attackDelay": 11.18999999999994,
       "defenceDelay": 15.194999999999936,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1477036,
@@ -1282,7 +1407,8 @@
       "deathGap": 0.0749999999998181,
       "attackDelay": 13.439999999999827,
       "defenceDelay": 17.37000000000012,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1477036,
@@ -1293,7 +1419,8 @@
       "deathGap": 0.05999999999994543,
       "attackDelay": 12.10499999999979,
       "defenceDelay": 16.049999999999955,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1477036,
@@ -1304,7 +1431,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 13.545000000000073,
       "defenceDelay": 21.585000000000036,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1476291,
@@ -1315,7 +1443,8 @@
       "deathGap": 0.045000000000015916,
       "attackDelay": 12.704999999999984,
       "defenceDelay": 20.75999999999999,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1476291,
@@ -1326,7 +1455,8 @@
       "deathGap": 0,
       "attackDelay": 14.42999999999995,
       "defenceDelay": 22.439999999999998,
-      "spawnGap": 8.010000000000048
+      "spawnGap": 8.010000000000048,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1476291,
@@ -1337,7 +1467,8 @@
       "deathGap": 0.05999999999994543,
       "attackDelay": 11.190000000000055,
       "defenceDelay": 15.254999999999995,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1476291,
@@ -1348,7 +1479,8 @@
       "deathGap": 0,
       "attackDelay": 10.5,
       "defenceDelay": 18.50999999999999,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1476291,
@@ -1359,7 +1491,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 14.100000000000136,
       "defenceDelay": 22.080000000000155,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1471516,
@@ -1370,7 +1503,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 12.555000000000064,
       "defenceDelay": 20.475000000000023,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1471087,
@@ -1381,7 +1515,8 @@
       "deathGap": 0.09000000000000341,
       "attackDelay": 13.125,
       "defenceDelay": 21.044999999999987,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1471087,
@@ -1392,7 +1527,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 13.39500000000001,
       "defenceDelay": 17.340000000000003,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1471087,
@@ -1403,7 +1539,8 @@
       "deathGap": 0.07499999999998863,
       "attackDelay": 13.425000000000011,
       "defenceDelay": 21.51000000000002,
-      "spawnGap": 8.01000000000002
+      "spawnGap": 8.01000000000002,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1471087,
@@ -1414,7 +1551,8 @@
       "deathGap": 0.03000000000002956,
       "attackDelay": 13.095000000000027,
       "defenceDelay": 17.069999999999993,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1471087,
@@ -1425,7 +1563,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 13.095000000000027,
       "defenceDelay": 21,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1471087,
@@ -1436,7 +1575,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 13.455000000000041,
       "defenceDelay": 21.345000000000027,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1471087,
@@ -1447,7 +1587,8 @@
       "deathGap": 0.08999999999991815,
       "attackDelay": 12.540000000000077,
       "defenceDelay": 16.63499999999999,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1471087,
@@ -1458,7 +1599,8 @@
       "deathGap": 0,
       "attackDelay": 10.754999999999995,
       "defenceDelay": 14.759999999999991,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1471087,
@@ -1469,7 +1611,8 @@
       "deathGap": 0,
       "attackDelay": 12.674999999999955,
       "defenceDelay": 16.67999999999995,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1469910,
@@ -1480,7 +1623,8 @@
       "deathGap": 0.07499999999998863,
       "attackDelay": 12.25500000000001,
       "defenceDelay": 16.334999999999994,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1469910,
@@ -1491,7 +1635,8 @@
       "deathGap": 0.01500000000001478,
       "attackDelay": 11.940000000000026,
       "defenceDelay": 15.930000000000007,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1469910,
@@ -1502,7 +1647,8 @@
       "deathGap": 0.10499999999998977,
       "attackDelay": 12.494999999999976,
       "defenceDelay": 20.610000000000014,
-      "spawnGap": 8.010000000000048
+      "spawnGap": 8.010000000000048,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1469031,
@@ -1513,7 +1659,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 11.295000000000016,
       "defenceDelay": 15.360000000000014,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1469031,
@@ -1524,7 +1671,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 10.875,
       "defenceDelay": 18.944999999999993,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1469031,
@@ -1535,7 +1683,8 @@
       "deathGap": 0.04499999999995907,
       "attackDelay": 14.219999999999914,
       "defenceDelay": 18.17999999999995,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1469031,
@@ -1546,7 +1695,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 13.274999999999977,
       "defenceDelay": 17.38499999999999,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1469031,
@@ -1557,7 +1707,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 13.169999999999959,
       "defenceDelay": 21.225000000000023,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1469031,
@@ -1568,7 +1719,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 12.659999999999968,
       "defenceDelay": 20.699999999999932,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1469031,
@@ -1579,7 +1731,8 @@
       "deathGap": 0.05999999999994543,
       "attackDelay": 13.43999999999994,
       "defenceDelay": 17.38499999999999,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1467675,
@@ -1590,7 +1743,8 @@
       "deathGap": 0.015000000000000568,
       "attackDelay": 12.240000000000009,
       "defenceDelay": 16.230000000000004,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1467675,
@@ -1601,7 +1755,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 11.189999999999998,
       "defenceDelay": 15.104999999999961,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1467213,
@@ -1612,7 +1767,8 @@
       "deathGap": 0.10500000000000398,
       "attackDelay": 13.215000000000003,
       "defenceDelay": 21.11999999999999,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1467213,
@@ -1623,7 +1779,8 @@
       "deathGap": 0.015000000000000568,
       "attackDelay": 13.004999999999995,
       "defenceDelay": 21.03,
-      "spawnGap": 8.010000000000005
+      "spawnGap": 8.010000000000005,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1467213,
@@ -1634,7 +1791,8 @@
       "deathGap": 0.07499999999998863,
       "attackDelay": 11.745000000000005,
       "defenceDelay": 15.675000000000011,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1467213,
@@ -1645,7 +1803,8 @@
       "deathGap": 0.04499999999995907,
       "attackDelay": 13.064999999999998,
       "defenceDelay": 17.11500000000001,
-      "spawnGap": 4.005000000000052
+      "spawnGap": 4.005000000000052,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1467213,
@@ -1656,7 +1815,9 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 15.555000000000064,
       "defenceDelay": 18.690000000000055,
-      "spawnGap": 3.105000000000018
+      "spawnGap": 3.105000000000018,
+      "waveAlignmentGap": 4,
+      "timingNote": "The attacking player_spawn event occurred about 0.9 seconds after the applicable four-second team wave."
     },
     {
       "id": 1467213,
@@ -1667,7 +1828,8 @@
       "deathGap": 0.09000000000014552,
       "attackDelay": 11.205000000000155,
       "defenceDelay": 15.11999999999989,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1467213,
@@ -1678,7 +1840,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 11.924999999999955,
       "defenceDelay": 20.039999999999964,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1467213,
@@ -1689,7 +1852,8 @@
       "deathGap": 0.060000000000172804,
       "attackDelay": 11.415000000000191,
       "defenceDelay": 15.3599999999999,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1467213,
@@ -1700,7 +1864,8 @@
       "deathGap": 0.09000000000014552,
       "attackDelay": 11.445000000000164,
       "defenceDelay": 15.3599999999999,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1467213,
@@ -1711,7 +1876,8 @@
       "deathGap": 0.015000000000100044,
       "attackDelay": 11.775000000000091,
       "defenceDelay": 15.764999999999873,
-      "spawnGap": 4.004999999999882
+      "spawnGap": 4.004999999999882,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1465871,
@@ -1722,7 +1888,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 11.219999999999999,
       "defenceDelay": 15.120000000000005,
-      "spawnGap": 4.005000000000024
+      "spawnGap": 4.005000000000024,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1465871,
@@ -1733,7 +1900,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 13.199999999999989,
       "defenceDelay": 17.144999999999982,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1465871,
@@ -1744,7 +1912,8 @@
       "deathGap": 0.045000000000015916,
       "attackDelay": 13.079999999999984,
       "defenceDelay": 21.13499999999999,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1465871,
@@ -1755,7 +1924,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 12.090000000000032,
       "defenceDelay": 16.035000000000025,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1465871,
@@ -1766,7 +1936,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 12.150000000000034,
       "defenceDelay": 16.035000000000025,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1461899,
@@ -1777,7 +1948,8 @@
       "deathGap": 0.11999999999989086,
       "attackDelay": 12.134999999999991,
       "defenceDelay": 20.264999999999873,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1460944,
@@ -1788,7 +1960,8 @@
       "deathGap": 0,
       "attackDelay": 13.785000000000025,
       "defenceDelay": 17.79000000000002,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1460944,
@@ -1799,7 +1972,8 @@
       "deathGap": 0.07499999999998863,
       "attackDelay": 11.400000000000034,
       "defenceDelay": 15.480000000000018,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1460944,
@@ -1810,7 +1984,8 @@
       "deathGap": 0.03000000000002956,
       "attackDelay": 14.28000000000003,
       "defenceDelay": 22.32000000000005,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1460944,
@@ -1821,7 +1996,8 @@
       "deathGap": 0.07499999999998863,
       "attackDelay": 14.385000000000048,
       "defenceDelay": 22.32000000000005,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1460944,
@@ -1832,7 +2008,8 @@
       "deathGap": 0,
       "attackDelay": 12,
       "defenceDelay": 16.004999999999995,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1460944,
@@ -1843,7 +2020,8 @@
       "deathGap": 0.014999999999986358,
       "attackDelay": 12,
       "defenceDelay": 15.990000000000009,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1460944,
@@ -1854,7 +2032,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 12.930000000000064,
       "defenceDelay": 20.850000000000023,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1460174,
@@ -1865,7 +2044,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 14.115000000000009,
       "defenceDelay": 22.004999999999995,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1460174,
@@ -1876,7 +2056,8 @@
       "deathGap": 0.01500000000001478,
       "attackDelay": 10.560000000000002,
       "defenceDelay": 14.549999999999983,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1460174,
@@ -1887,7 +2068,8 @@
       "deathGap": 0.05999999999994543,
       "attackDelay": 13.769999999999982,
       "defenceDelay": 17.715000000000032,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1460174,
@@ -1898,7 +2080,8 @@
       "deathGap": 0,
       "attackDelay": 11.625,
       "defenceDelay": 15.63000000000011,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1460174,
@@ -1909,7 +2092,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 13.019999999999982,
       "defenceDelay": 16.920000000000073,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1460174,
@@ -1920,7 +2104,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 10.559999999999945,
       "defenceDelay": 18.61500000000001,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1460174,
@@ -1931,7 +2116,8 @@
       "deathGap": 0.044999999999845386,
       "attackDelay": 14.399999999999864,
       "defenceDelay": 22.36500000000001,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1460174,
@@ -1942,7 +2128,8 @@
       "deathGap": 0.060000000000172804,
       "attackDelay": 14.294999999999845,
       "defenceDelay": 22.36500000000001,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1460174,
@@ -1953,7 +2140,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 12.75,
       "defenceDelay": 20.714999999999918,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1458972,
@@ -1964,7 +2152,8 @@
       "deathGap": 0.01500000000001478,
       "attackDelay": 12.930000000000007,
       "defenceDelay": 16.950000000000017,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1458972,
@@ -1975,7 +2164,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 12.404999999999973,
       "defenceDelay": 16.379999999999995,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1458972,
@@ -1986,7 +2176,8 @@
       "deathGap": 0.060000000000002274,
       "attackDelay": 11.069999999999993,
       "defenceDelay": 15.134999999999991,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1458972,
@@ -1997,7 +2188,8 @@
       "deathGap": 0,
       "attackDelay": 11.295000000000016,
       "defenceDelay": 19.305000000000007,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1458972,
@@ -2008,7 +2200,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 13.67999999999995,
       "defenceDelay": 21.809999999999945,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1458972,
@@ -2019,7 +2212,8 @@
       "deathGap": 0.04499999999995907,
       "attackDelay": 10.740000000000009,
       "defenceDelay": 18.70500000000004,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1458960,
@@ -2030,7 +2224,8 @@
       "deathGap": 0,
       "attackDelay": 11.565000000000055,
       "defenceDelay": 15.57000000000005,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1458960,
@@ -2041,7 +2236,8 @@
       "deathGap": 0.09000000000003183,
       "attackDelay": 10.574999999999932,
       "defenceDelay": 14.670000000000073,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1458960,
@@ -2052,7 +2248,8 @@
       "deathGap": 0.10499999999979082,
       "attackDelay": 12.060000000000173,
       "defenceDelay": 20.174999999999955,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1458960,
@@ -2063,7 +2260,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 11.025000000000091,
       "defenceDelay": 19.110000000000127,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1458960,
@@ -2074,7 +2272,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 11.025000000000091,
       "defenceDelay": 19.110000000000127,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1457985,
@@ -2085,7 +2284,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 12.149999999999977,
       "defenceDelay": 20.129999999999995,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1457985,
@@ -2096,7 +2296,8 @@
       "deathGap": 0.10500000000001819,
       "attackDelay": 13.4849999999999,
       "defenceDelay": 17.38499999999999,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1457985,
@@ -2107,7 +2308,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 11.535000000000082,
       "defenceDelay": 19.5,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1456855,
@@ -2118,7 +2320,8 @@
       "deathGap": 0,
       "attackDelay": 10.84499999999997,
       "defenceDelay": 14.849999999999966,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1456855,
@@ -2129,7 +2332,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 11.174999999999955,
       "defenceDelay": 19.30499999999995,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1456855,
@@ -2140,7 +2344,8 @@
       "deathGap": 0.014999999999986358,
       "attackDelay": 11.93999999999994,
       "defenceDelay": 15.92999999999995,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1456855,
@@ -2151,7 +2356,8 @@
       "deathGap": 0.04500000000007276,
       "attackDelay": 10.815000000000055,
       "defenceDelay": 18.779999999999973,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1453810,
@@ -2162,7 +2368,8 @@
       "deathGap": 0.030000000000001137,
       "attackDelay": 10.439999999999998,
       "defenceDelay": 18.47999999999999,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1453810,
@@ -2173,7 +2380,8 @@
       "deathGap": 0.11999999999989086,
       "attackDelay": 11.954999999999927,
       "defenceDelay": 15.840000000000032,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1453810,
@@ -2184,7 +2392,8 @@
       "deathGap": 0.06000000000005912,
       "attackDelay": 12.870000000000005,
       "defenceDelay": 20.819999999999936,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1453810,
@@ -2195,7 +2404,8 @@
       "deathGap": 0.12000000000011823,
       "attackDelay": 10.875,
       "defenceDelay": 19.00500000000011,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1453810,
@@ -2206,7 +2416,8 @@
       "deathGap": 0.08999999999991815,
       "attackDelay": 11.085000000000036,
       "defenceDelay": 19.00500000000011,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1453810,
@@ -2217,7 +2428,8 @@
       "deathGap": 0.05999999999994543,
       "attackDelay": 12.599999999999909,
       "defenceDelay": 16.545000000000073,
-      "spawnGap": 4.005000000000109
+      "spawnGap": 4.005000000000109,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1451033,
@@ -2228,7 +2440,8 @@
       "deathGap": 0.044999999999987494,
       "attackDelay": 11.775000000000006,
       "defenceDelay": 15.735000000000014,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1451033,
@@ -2239,7 +2452,8 @@
       "deathGap": 0.07499999999993179,
       "attackDelay": 11.009999999999991,
       "defenceDelay": 14.940000000000055,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1449214,
@@ -2250,7 +2464,8 @@
       "deathGap": 0.12000000000000455,
       "attackDelay": 13.425000000000068,
       "defenceDelay": 17.550000000000068,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1449214,
@@ -2261,7 +2476,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 14.115000000000009,
       "defenceDelay": 18.149999999999977,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1449210,
@@ -2272,7 +2488,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 12.855000000000018,
       "defenceDelay": 16.83000000000004,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1448413,
@@ -2283,7 +2500,8 @@
       "deathGap": 0.029999999999972715,
       "attackDelay": 13.995000000000005,
       "defenceDelay": 21.975000000000023,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1448413,
@@ -2294,7 +2512,8 @@
       "deathGap": 0.030000000000086402,
       "attackDelay": 11.07000000000005,
       "defenceDelay": 19.049999999999955,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     },
     {
       "id": 1448413,
@@ -2305,7 +2524,8 @@
       "deathGap": 0.04499999999995907,
       "attackDelay": 12.210000000000036,
       "defenceDelay": 16.170000000000073,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1448413,
@@ -2316,7 +2536,8 @@
       "deathGap": 0.07500000000004547,
       "attackDelay": 11.490000000000009,
       "defenceDelay": 15.419999999999959,
-      "spawnGap": 4.0049999999999955
+      "spawnGap": 4.0049999999999955,
+      "waveAlignmentGap": 4
     },
     {
       "id": 1448413,
@@ -2327,7 +2548,8 @@
       "deathGap": 0.11999999999989086,
       "attackDelay": 12.210000000000036,
       "defenceDelay": 20.339999999999918,
-      "spawnGap": 8.009999999999991
+      "spawnGap": 8.009999999999991,
+      "waveAlignmentGap": 8
     }
   ]
 }

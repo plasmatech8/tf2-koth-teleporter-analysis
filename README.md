@@ -2,7 +2,7 @@
 
 This repository contains plasmatech8's report on the reinforcement value of keeping or destroying an Engineer's teleporter exit during competitive Team Fortress 2 King of the Hill resets.
 
-- Read the current PDF: [dark theme](output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.5.17.pdf) or [light theme](output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.5.17.pdf)
+- Read the current PDF: [dark theme](output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.7.0.pdf) or [light theme](output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.7.0.pdf)
 - [Read the Markdown source](TF2_KOTH_Teleporter_Report.md)
 - [See the data and privacy notes](docs/DATA.md)
 
@@ -26,10 +26,10 @@ The scripts require Node.js and Python 3. Python package requirements are import
 node research/report_model.mjs
 node research/validate_report.mjs
 python research/report_figures.py
-python research/build_report_pdf.py --output=output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.5.17.pdf
-python research/build_report_pdf.py --dark --output=output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.5.17.pdf
-python research/verify_report_release.py output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.5.17.pdf
-python research/verify_report_release.py output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.5.17.pdf
+python research/build_report_pdf.py --output=output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.7.0.pdf
+python research/build_report_pdf.py --dark --output=output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.7.0.pdf
+python research/verify_report_release.py output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.7.0.pdf
+python research/verify_report_release.py output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.7.0.pdf
 ```
 
 Raw demos and extracted player data are intentionally excluded. The mathematical report model and published aggregate outputs remain available without them.
