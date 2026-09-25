@@ -100,6 +100,9 @@ assert(report.includes("A player dies late or respawns behind the group"), "Late
 assert(report.includes("A Level 3 teleporter has 216 health, compared with 150 at Level 1"), "Retained-L3 durability factor is missing");
 assert(report.includes("The live game state may not fit one clean label") && report.includes("staging can overlap active combat"), "Ambiguous live-state qualifier is missing");
 assert(report.includes("Favours keeping the exit") && report.includes("Favours destroying the exit") && report.includes("Changes how much either choice matters"), "Directional decision-factor groups are missing");
+assert(report.includes("Across 46 recordings covering 114 rounds") && report.includes("44 reset-like uses, of which 7 were followed by death within 5 seconds"), "Unsafe-use count summary is missing");
+assert(report.includes("2 clear harmful known-reset uses") && report.includes("1 additional unsafe known-reset use where the player survived"), "Unsafe-use review classifications are missing");
+assert(figureSource.includes("if item['mode'] != 'walk' and 'entranceArrival' in item") && figureSource.includes("f\"{item['arrival']:.1f}s ({mode})\""), "Scenario 2B defender route markers are ambiguous");
 assert(model.inputs.maxQueueWait.l1 === 1 && model.inputs.maxQueueWait.l2 === 1 && model.inputs.maxQueueWait.l3 === 1, "The one-second all-level wait rule is missing from the model");
 for (const [map, trades, expected] of [["product", 2, 5.4], ["product", 4, 10.8], ["ashville", 2, 6.4], ["ashville", 4, 12.8]]) {
   const row = model.scenarios.find(x => x.map === map && x.trades === trades);

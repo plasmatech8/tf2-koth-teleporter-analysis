@@ -7,8 +7,8 @@
 /output/archive/
 /output/TF2_Teleporter_Demo_Review/
 /output/pdf/*
-!/output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.7.0.pdf
-!/output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.7.0.pdf
+!/output/pdf/TF2_KOTH_Teleporter_Report_Soft_Dark_v1.7.1.pdf
+!/output/pdf/TF2_KOTH_Teleporter_Report_Light_v1.7.1.pdf
 
 # Research is private by default. The exceptions below are the reviewed,
 # publishable model, methods, figures, and analysis source.

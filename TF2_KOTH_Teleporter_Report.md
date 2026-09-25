@@ -270,7 +270,7 @@ This one scenario now gives three different, correct statements:
 
 ![Front-line arrival timeline comparing retained L3 and rebuilt L1](research/report_assets/frontline-arrival-timeline.png)
 
-*The hollow dots mark spawns, thin lines mark travel/queue time, small muted dots mark tele-entrance arrival, and solid coloured dots mark front-line arrival. The centre strip shows the return-cohort advantage over defenders.*
+*The hollow dots mark spawns, thin lines mark travel/queue time, small muted dots mark tele-entrance arrival for tele riders, and solid coloured dots mark front-line arrival. The centre strip shows the return-cohort advantage over defenders.*
 
 ### 7. Extend the same rules to every case
 
@@ -374,7 +374,7 @@ Across 209 near-simultaneous pairs, the scheduled team-wave alignments were four
 
 ### Unsafe-use candidates
 
-Forty-six recordings with active rounds were screened, covering about 16 hours 7 minutes and 1,934 friendly tele uses. The destruction policy was implemented after August 18, so the August 18 match is included in the earlier period.
+Across 46 recordings covering 114 rounds and about 16 hours 7 minutes of active play, there were 1,934 friendly teleporter uses. The automated screen flagged 44 reset-like uses, of which 7 were followed by death within 5 seconds. Manual review classified those 7 as 2 clear harmful known-reset uses, 3 punished premature or transition-period uses, and 2 ambiguous or legitimate continuations. It also reviewed 1 additional unsafe known-reset use where the player survived. The destruction policy was implemented after August 18, so the August 18 match is included in the earlier period.
 
 | Period | Recordings | Active play | Friendly tele uses | Reset-like uses | Death within 5 s | Rapid-death screens reviewed |
 |---|---:|---:|---:|---:|---:|---:|
@@ -382,7 +382,7 @@ Forty-six recordings with active rounds were screened, covering about 16 hours 7
 | After Aug 18 policy implementation | 12 | 4 h 20.8 min | 516 | 3 | 1 | 1 / 1 |
 | **Total** | **46** | **16 h 7.3 min** | **1,934** | **44** | **7** | **7 / 7** |
 
-The five-second column is a screening result, not seven proven mistakes. Manual visual review classified the seven rapid-death scenes listed below and one non-death unsafe-use control described after the table. Across those eight scenes, it found two harmful known-reset uses, three other deaths after premature or transition-period uses with different policy implications, one unsafe known-reset use that survived, and two ambiguous or legitimate continuations. These scenes should not be compressed into a single misuse count.
+“Reset-like” is a broad automated screening category, not a confirmed-misuse label. These eight reviewed scenes should not be compressed into a single misuse count.
 
 Of the 44 reset-like uses, 10 occurred while the team's Medic was alive and moving away from spawn with a nearby teammate, with recent combat activity also detected. These signals may indicate that the fight was continuing, but they can also appear during a prohibited after-wipe rollout. The 10 cases therefore require manual review and are not classified as confirmed reset mistakes from position data alone.
 

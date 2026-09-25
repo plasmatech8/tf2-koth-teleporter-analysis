@@ -7,7 +7,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_OVERRIDE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else None
-EXPECTED_VERSION = "1.7.0"
+EXPECTED_VERSION = "1.7.1"
 texts = []
 targets = (
     ("light", "TF2_KOTH_Teleporter_Report_Light.pdf", "17678f", "ffffff"),
@@ -25,7 +25,7 @@ for theme, filename, blue, header in targets:
     normal = re.sub(r"\s+", " ", text)
     assert f"v{EXPECTED_VERSION}" in reader.metadata.subject
     assert reader.metadata.author == "plasmatech8 (w/ Codex)"
-    assert all(f"v{EXPECTED_VERSION} | 24 September 2026" in p for p in pages)
+    assert all(f"v{EXPECTED_VERSION} | 25 September 2026" in p for p in pages)
     assert "Author: plasmatech8 (w/ Codex)" in pages[0]
     for required in (
         "209 near-simultaneous opposing death pairs",
@@ -35,6 +35,10 @@ for theme, filename, blue, header in targets:
         "a defender may walk when two defenders share one charged L3",
         "A Level 3 teleporter has 216 health, compared with 150 at Level 1",
         "The live game state may not fit one clean label",
+        "Across 46 recordings covering 114 rounds",
+        "44 reset-like uses, of which 7 were followed by death within 5 seconds",
+        "2 clear harmful known-reset uses",
+        "1 additional unsafe known-reset use where the player survived",
         "51.94 x 1 + 5.84 x 2 = 63.62",
         "125874 / 31:28.11", "131458", "75.33-second",
         "tick 64995 / 16:14.92", "tick 65190", "tick 65337",

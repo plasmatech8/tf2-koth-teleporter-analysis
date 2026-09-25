@@ -333,11 +333,15 @@ for panel_index, (key, title) in enumerate(panels):
     for y, item in zip([top + 320, top + 380], s['defence']):
         line(d, [(sx(item['spawn']), y), (sx(item['arrival']), y)], fill=MUTED, width=2)
         d.ellipse((sx(item['spawn']) - 7, y - 7, sx(item['spawn']) + 7, y + 7), outline=MUTED, width=2)
-        if 'entranceArrival' in item:
+        if item['mode'] != 'walk' and 'entranceArrival' in item:
             d.ellipse((sx(item['entranceArrival']) - 4, y - 4, sx(item['entranceArrival']) + 4, y + 4), fill=MUTED)
         d.rounded_rectangle((sx(item['arrival']), y - 15, sx(horizon), y + 15), radius=7, fill=RED)
         d.ellipse((sx(item['arrival']) - 8, y - 8, sx(item['arrival']) + 8, y + 8), fill=RED)
-        text(d, (sx(item['arrival']) + 8, y + 25), f"{item['arrival']:.1f}s", 20, fill=RED, anchor='lt')
+        mode = 'walks' if item['mode'] == 'walk' else 'tele'
+        endpoint = item['arrival'] >= tmax - 1
+        label_x = sx(item['arrival']) - 8 if endpoint else sx(item['arrival']) + 8
+        text(d, (label_x, y + 25), f"{item['arrival']:.1f}s ({mode})", 20, fill=RED,
+             anchor='rt' if endpoint else 'lt')
     for interval in net['intervals']:
         margin = interval['margin']
         color = advantage_colour(margin)
